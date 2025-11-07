@@ -1,0 +1,23 @@
+.nueva-reserva {
+  max-width: 700px;
+}
+
+.nueva-reserva h2 {
+  color: #6c3b00;
+  font-weight: bold;
+}
+
+.nueva-reserva .card {
+  border-radius: 10px;
+  border: none;
+  background-color: #fff8f0;
+}
+
+.nueva-reserva .btn-warning {
+  background-color: #d49b00;
+  border: none;
+}
+
+.nueva-reserva .btn-warning:hover {
+  background-color: #b78300;
+}

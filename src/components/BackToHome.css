@@ -1,0 +1,28 @@
+.back-to-home-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background-color: var(--color-primary);
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+  transition: var(--transition-normal);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-to-home-btn:hover {
+  background-color: var(--color-primary-dark);
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.6);
+}
+
+.back-to-home-btn:active {
+  transform: scale(0.95);
+}

@@ -1,0 +1,56 @@
+.header {
+  background: linear-gradient(90deg, #1a0000, #330000, #660000);
+  color: #fff;
+  padding: 12px 24px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-content {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo y texto */
+.header-logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 12px;
+}
+
+.logo-img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+
+.logo-text h1 {
+  font-size: 22px;
+  color: #ff4500; /* Naranja fuego */
+  font-family: 'Georgia', serif;
+  margin: 0;
+  text-shadow: 1px 1px 4px #000;
+}
+
+.logo-text p {
+  font-size: 13px;
+  color: #ffb347;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+/* Título del sistema */
+.header-title h2 {
+  color: #ffd700; /* Amarillo dorado */
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 4px #000;
+  margin: 0;
+}

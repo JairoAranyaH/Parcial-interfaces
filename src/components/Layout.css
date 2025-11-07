@@ -1,0 +1,15 @@
+.layout {
+  background-color: var(--bg-light);
+  min-height: 100vh;
+}
+
+.layout-container {
+  display: flex;
+}
+
+.layout-main {
+  flex: 1;
+  padding: 40px;
+  background-color: var(--bg-light);
+  min-height: calc(100vh - 111px);
+}

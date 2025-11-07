@@ -1,0 +1,24 @@
+.listar-reservas h2 {
+  color: #6c3b00;
+  font-weight: bold;
+}
+
+.listar-reservas .card {
+  border-radius: 10px;
+  background-color: #fff8f0;
+  border: none;
+}
+
+.table-dark {
+  background-color: #4b1b0d !important;
+}
+
+.btn-primary {
+  background-color: #0066cc;
+  border: none;
+}
+
+.btn-danger {
+  background-color: #cc0000;
+  border: none;
+}
