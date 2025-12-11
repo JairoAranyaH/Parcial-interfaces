@@ -1,7 +1,10 @@
 import React from 'react';
 import './Dashboard.css';
 
-function Dashboard() {
+// 1. Recibimos la prop onNavigate
+function Dashboard({ onNavigate }) {
+  
+  // (Tus datos estadísticos siguen igual por ahora...)
   const estadisticas = [
     { titulo: 'Reservas de Hoy', valor: 12, color: 'var(--color-primary)' },
     { titulo: 'Mesas Ocupadas', valor: 8, color: 'var(--color-primary-dark)' },
@@ -32,7 +35,13 @@ function Dashboard() {
 
       <div className="reservas-header">
         <h3>Próximas Reservas</h3>
-        <button className="btn-nueva-reserva">+ Nueva Reserva</button>
+        {/* 2. Agregamos el evento onClick aquí 👇 */}
+        <button 
+            className="btn-nueva-reserva" 
+            onClick={() => onNavigate('nueva-reserva')}
+        >
+            + Nueva Reserva
+        </button>
       </div>
 
       <div className="reservas-list">

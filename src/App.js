@@ -6,50 +6,47 @@ import Inicio from './pages/Inicio';
 import Paneladm from './pages/Paneladm';
 import Nuevareserva from './pages/Nuevareserva';
 import Listarreservas from './pages/ListarReservas';
+import Calendario from './pages/Calendario';
+import Login from './pages/Login'; // <-- AGREGA ESTO
 
 function App() {
   const [currentPage, setCurrentPage] = useState('inicio');
-
+  
   const handleNavigation = (page) => {
     setCurrentPage(page);
     window.scrollTo(0, 0);
   };
 
+  // Si está en la pantalla de inicio
   if (currentPage === 'inicio') {
     return (
       <Inicio 
-        onEnterSystem={() => handleNavigation('dashboard')} 
+        onEnterSystem={() => handleNavigation('login')} // <-- CAMBIADO A LOGIN
         onNavigate={handleNavigation} 
       />
     );
   }
 
+  // Renderiza las demás páginas
   const renderPage = () => {
-    switch(currentPage) {
+    switch (currentPage) {
       case 'dashboard':
-        return <Dashboard />;
+        return <Dashboard onNavigate={handleNavigation} />;
       case 'panel-admin':
         return <Paneladm />;
       case 'calendario':
-        return (
-          <div>
-            <h2 style={{ fontSize: '32px', fontWeight: '300', marginBottom: '20px' }}>
-              Calendario
-            </h2>
-            <p style={{ color: 'var(--text-secondary)' }}>
-              Vista del calendario en construcción...
-            </p>
-          </div>
-        );
+        return <Calendario />;
       case 'nueva-reserva':
-        return <Nuevareserva />;
+        return <Nuevareserva onNavigate={handleNavigation} />;
       case 'lista-reservas':
-        return <Listarreservas />;
+        return <Listarreservas onNavigate={handleNavigation} />;
+      case 'login':
+        return <Login onNavigate={handleNavigation} />; // <-- NUEVO
       default:
         return <Dashboard />;
     }
   };
-
+  
   return (
     <Layout currentPage={currentPage} onPageChange={handleNavigation}>
       {renderPage()}
